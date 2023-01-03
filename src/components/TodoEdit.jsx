@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
-import TodosContext from "../context/todos";
+import React, { useState } from "react";
+import useTodosContext from "../hooks/use-todos-context";
 
 const TodoEdit = ({ onSubmit, task }) => {
   const [newTaskName, setNewTaskName] = useState(task.name);
 
-  const { editTaskById } = useContext(TodosContext);
+  const { editTaskById } = useTodosContext()
 
   const handleEdit = (event) => {
     setNewTaskName(event.target.value);

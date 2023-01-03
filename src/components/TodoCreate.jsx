@@ -1,12 +1,13 @@
-import React, { useContext, useState } from 'react'
-import TodosContext from '../context/todos'
+import React, {  useState } from 'react'
+import useTodosContext from '../hooks/use-todos-context'
 
 
 const TodoCreate = () => {
 
     const [taskName,setTaskName]=useState("")
 
-    const{createTask}=useContext(TodosContext)
+    const{createTask}=useTodosContext()
+    
 
     const handleChange=(event)=>{
       setTaskName(event.target.value)

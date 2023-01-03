@@ -1,12 +1,11 @@
-import { useContext} from "react";
 import "./App.css";
 import TodoCreate from "./components/TodoCreate";
 import TodoList from "./components/TodoList";
-import TodosContext from "./context/todos";
+import useTodosContext from "./hooks/use-todos-context";
 
 function App() {
 
-  const {tasks}=useContext(TodosContext)
+  const {tasks}=useTodosContext();
 
 
   return (

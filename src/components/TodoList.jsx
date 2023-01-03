@@ -1,9 +1,14 @@
-import React, { useContext } from 'react'
-import TodosContext from '../context/todos'
+import React from 'react'
+import useTodosContext from '../hooks/use-todos-context'
 import TodoItem from './TodoItem'
 
+
+
+
 const TodoList = () => {
-  const{tasks}=useContext(TodosContext)
+  const{tasks}=useTodosContext()
+  
+
   return (
     <section>
     {

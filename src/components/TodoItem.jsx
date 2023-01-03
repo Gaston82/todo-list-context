@@ -1,12 +1,13 @@
-import React, { useContext, useState } from 'react'
-import TodosContext from '../context/todos'
+import React, {  useState } from 'react'
+import useTodosContext from '../hooks/use-todos-context'
 import TodoEdit from './TodoEdit'
 
 
 
 const TodoItem = ({task}) => {
     const[showEdit,setShowEdit]=useState(false)
-    const {deleteTaskById } = useContext(TodosContext)
+    const {deleteTaskById } = useTodosContext()
+    
 
     const handleDelete=()=>{
         deleteTaskById(task.id)
